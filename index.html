@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER & NAV -->
+  <header class="navbar">
+    <div class="logo">😊</div>
+
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <nav id="navbarMenu">
+      <ul>
+         <li><a href="index.html#home">Home</a></li>
+         <li><a class="active" href="profile.html">Our Profile</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#message">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- POPUP WELCOME -->
+<h2 id="welcomePopup" class="popup-overlay"></h2>
+  <div class="popup-box">
+    <h2>Selamat Datang!</h2>
+    <p>Izinkan saya membantu, dengan siapa saya berbicara?</p>
+
+    <input type="text" id="popupName" placeholder="Isi nama anda...">
+    <button id="popupSubmit">Mulai</button>
+</div>
+
+
+  <!-- HOME SECTION -->
+  <section id="home" class="home">
+    <h2>Hi Guest, Welcome To Website</h2>
+    <p>Ini adalah website latihan pertama</p>
+
+    <div class="placeholder-img">
+  <img src="profile.jpeg" alt="Home Banner">
+</div>
+  </section>
+
+  <!-- HEADQUARTER SECTION -->
+  <section class="headquarter">
+    <h2>Our Headquarter</h2>
+
+    <div class="circle-container">
+      <div class="circle-box">
+        <div class="circle"></div>
+        <p>Jakarta</p>
+      </div>
+
+      <div class="circle-box">
+        <div class="circle"></div>
+        <p>Bandung</p>
+      </div>
+
+      <div class="circle-box">
+        <div class="circle"></div>
+        <p>Surabaya</p>
+      </div>
+    </div>
+  </section>
+<!-- MESSAGE US SECTION -->
+<section id="message" class="message-us">
+
+  <h2>Message Us</h2>
+
+  <div class="form-container">
+    <!-- FORM -->
+    <form id="messageForm" class="left-form">
+      <label>Nama :</label>
+      <input id="inputNama" type="text" placeholder="Nama">
+
+      <label>Tanggal Lahir :</label>
+      <input id="inputTanggal" type="date">
+
+      <label>Jenis Kelamin :</label>
+      <div class="radio-row">
+        <input type="radio" name="jk" value="Laki-Laki"> Laki-Laki
+        <input type="radio" name="jk" value="Perempuan"> Perempuan
+      </div>
+
+      <label>Pesan :</label>
+      <textarea id="inputPesan" placeholder="Pesan"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- OUTPUT BOX -->
+    <div class="output-box" id="outputBox">
+      <p><strong>Current time :</strong> - </p>
+      <br>
+      <p><strong>Nama :</strong> -</p>
+      <p><strong>Tanggal Lahir :</strong> -</p>
+      <p><strong>Jenis Kelamin :</strong> -</p>
+      <p><strong>Pesan :</strong> -</p>
+    </div>
+  </div>
+
+</section>
+
+
+  <footer>
+    Created By Rian Lubinda
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  position: relative; /* Wajib agar dropdown ikut nempel */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 14px;
+  border: 1px solid #000;
+  border-radius: 6px;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ============================= */
+/*            MOBILE             */
+/* ============================= */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block; 
+  }
+
+  /* Dropdown menu container */
+  #navbarMenu {
+    position: absolute;
+    top: 60px;      /* Turun dari navbar */
+    right: 20px;    /* Nempel kanan */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 180px;
+
+    display: block;
+    padding: 0;
+
+    /* Animasi */
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height .3s ease, opacity .3s ease;
+  }
+
+  #navbarMenu ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  #navbarMenu li a {
+    display: block;
+    text-align: right;
+  }
+
+  /* Aktif = dropdown turun */
+  #navbarMenu.active {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+/* OVERLAY */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* animasi */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+
+  /* ini penting */
+  z-index: 999;
+}
+
+/* AKTIF */
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* POPUP BOX (DIPASTIKAN DI ATAS OVERLAY) */
+.popup-box {
+  background: #fff;
+  padding: 25px;
+  width: 350px;
+  border-radius: 12px;
+  text-align: center;
+
+  /* pastikan mengalahkan overlay */
+  position: relative;
+  z-index: 1000;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* INPUT */
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* BUTTON */
+.popup-box button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background: #4e8cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .popup-box {
+    width: 85%;
+    padding: 20px;
+  }
+}
+
+
+/* HOME */
+.home {
+  padding: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.placeholder-img img {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+/* HEADQUARTERS */
+.headquarter {
+  padding: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.circle-box {
+  text-align: center;
+}
+
+/* MESSAGE US */
+.message-us {
+  padding: 40px;
+  border-bottom: 1px solid #000;
+}
+
+.form-container {
+  display: flex;
+  gap: 30px;
+}
+
+.left-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-form input,
+.left-form textarea {
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+.radio-row {
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px;
+  width: 150px;
+  background: #eee;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.output-box {
+  border: 1px solid #000;
+  padding: 20px;
+  width: 40%;
+  height: fit-content;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .output-box {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    text-align: left; /* supaya tetap rapi */
+  }
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
